@@ -1,0 +1,207 @@
+<script type="text/javascript">
+    //<![CDATA[
+    function install(url) {
+    
+    	var url = url;
+    	
+        new Ajax.Request('<?php echo Mage::helper('adminhtml')->getUrl('adminhtml/adminhtml_github/install') ?>', {
+            method:     'post',
+            parameters: {git_url: url}, 
+            onSuccess: function(transport){
+				
+				console.log(transport.responseText);
+			
+	            if (transport.responseText == 1){
+	                window.location.reload();
+	            }else{
+		            alert("Error");
+					console.log(transport.responseText);
+	            }
+            }
+        });
+    }
+    //]]>
+</script>
+
+<style>
+	.form-list td.value p.note {
+		width: 774px;;
+	}
+</style>
+
+<p class="note"><span>Here you can install just with one click last versions of best free open source Magento extensions hosted on GitHub grouped by categories. Please read description and manual on GitHub or extension web site before install and use!<br /></span></p><br />
+
+
+<div class="section-config"><div class="entry-edit-head collapseable">
+
+<a id="github_pf-head" href="#" onclick="Fieldset.toggleCollapse('github_pf', '#'); return false;" class="">Performance, load speed optimisation</a>
+</div>
+
+<input id="github_pf-state" name="config_state[github_pf]" type="hidden" value="0">
+<fieldset class="config collapseable" id="github_pf" style="display: none;">
+
+<p><h3>Lest Full page cache</h3> (<a href="http://github.com/GordonLesti/Lesti_Fpc" target="_blank">GitHub</a> | <a href="http://gordonlesti.com/lestifpc/" target="_blank">WebSite / Manual</a>)
+<p class="note"><span>Absolutely must have, best free full page cache extension! Lesti::Fpc is internal full page cache for Magento. This Cache needs no varnish or any other extenal software and works with events. It is an internal cache and so it replaces dynamic blocks before sending response to customer.</span></p>
+<button id="github_button" title="Install extension" type="button" class="scalable " onclick="javascript:install('http://github.com/GordonLesti/Lesti_Fpc'); return false;" style=""><span><span><span>Install Lesti::FPC</span></span></span></button></p>
+
+<p><h3>Fooman Speedster</h3> (<a href="http://github.com/fooman/speedster/" target="_blank">GitHub</a> | <a href="http://store.fooman.co.nz/magento-extension-speedster.html" target="_blank">WebSite / Manual</a>)
+<p class="note"><span>Absolutely must have, Speed up your store by combining, compressing and caching Javascript and CSS files.ombines multiple Javascript and CSS files into a single Javascript file and single CSS file, to enable faster page load times. Reduces the total size of files to be loaded as well as the number of HTTP requests, for empty and primed caches.Fully automated once installed, with automatic versioning when Javascript/CSS files are updated.</span></p>
+<button id="github_button" title="Install extension" type="button" class="scalable " onclick="javascript:install('http://github.com/fooman/speedster/'); return false;" style=""><span><span><span>Install Fooman Speedster</span></span></span></button></p>
+
+<p><h3>Magento Varnish</h3> (<a href="http://github.com/huguesalary/Magento-Varnish" target="_blank">GitHub</a>)
+<p class="note"><span>This Magento extension provides a Real Full Page Caching (FPC) for Magento powered by Varnish with support of Session-Based information caching (Cart, Customer Accounts, ...) via ESI includes. Tired of fake Full Page Cache Magento extensions? Tired of these extensions promising to make your website fly, shooting to the stars, but barely reaching sea level? This extension is for you.</span></p>
+<button id="github_button" title="Install extension" type="button" class="scalable " onclick="javascript:install('http://github.com/huguesalary/Magento-Varnish'); return false;" style=""><span><span><span>Install Magento Varnish</span></span></span></button></p>
+
+<p><h3>Turpentine Extension (Varnish) for Magento</h3> (<a href="http://github.com/nexcess/magento-turpentine" target="_blank">GitHub</a> | <a href="http://github.com/nexcess/magento-turpentine/wiki" target="_blank">WebSite / Manual</a>)
+<p class="note"><span>Turpentine is a full page cache extension for Magento that works with Varnish, a very fast caching reverse-proxy. By default, Varnish doesn't cache requests with cookies and Magento sends the frontend cookie with every request causing a (near) zero hit-rate for Varnish's cache. Turpentine configures Varnish to work with Magento and modifies Magento's behaviour to significantly improve the cache hit rate.</span></p>
+<button id="github_button" title="Install extension" type="button" class="scalable " onclick="javascript:install('http://github.com/nexcess/magento-turpentine'); return false;" style=""><span><span><span>Install Turpentine</span></span></span></button></p>
+
+
+
+</fieldset>
+
+</div>
+
+
+<div class="section-config"><div class="entry-edit-head collapseable">
+
+<a id="github_cat-head" href="#" onclick="Fieldset.toggleCollapse('github_cat', '#'); return false;" class="">Catalog - products, categories</a>
+</div>
+
+<input id="github_cat-state" name="config_state[github_cat]" type="hidden" value="0">
+<fieldset class="config collapseable" id="github_cat" style="display: none;">
+
+<p><h3>Simple Configurable Products </h3> (<a href="http://github.com/organicinternet/magento-configurable-simple" target="_blank">GitHub</a> | <a href="http://www.magentocommerce.com/magento-connect/simple-configurable-products.html" target="_blank">WebSite / Manual</a>)
+<p class="note"><span>This extension changes the way that the pricing of Configurable Products works in Magento. With Simple Configurable Products, the price for configurable products is taken directly from the associated simple products rather than the configurable product itself.This gives site owners direct control over the price of every individual configuration of a product, while still giving users the flexibility they usually get with configurable products.</span></p>
+<button id="github_button" title="Install extension" type="button" class="scalable " onclick="javascript:install('http://github.com/organicinternet/magento-configurable-simple'); return false;" style=""><span><span><span>Install Simple Configurable Products</span></span></span></button></p>
+
+<p><h3>Customer Groups Catalog</h3> (<a href="http://github.com/Vinai/groupscatalog2" target="_blank">GitHub</a> | <a href="http://www.magentocommerce.com/magento-connect/customer-groups-catalog2.html" target="_blank">WebSite / Manual</a>)
+<p class="note"><span>Magento extension to enable you to hide categories and products from customers depending on their customer group.</span></p>
+<button id="github_button" title="Install extension" type="button" class="scalable " onclick="javascript:install('http://github.com/Vinai/groupscatalog2'); return false;" style=""><span><span><span>Install Customer Groups Catalog</span></span></span></button></p> 
+
+
+<p><h3>Magento Sphinx catalog search</h3> (<a href="http://github.com/fheyer/sphinxsearch" target="_blank">GitHub / Manual</a>)
+<p class="note"><span>This magento extension provides integration for Magento CE with a sphinx search server. Sphinx is a free software/open source Fulltext search engine designed to provide full-text search functionality to client applications.</span></p>
+<button id="github_button" title="Install extension" type="button" class="scalable " onclick="javascript:install('http://github.com/fheyer/sphinxsearch'); return false;" style=""><span><span><span>Install Sphinx catalog search</span></span></span></button></p> 
+
+<p><h3>Save stock movements</h3> (<a href="http://github.com/jreinke/magento-stock-movements" target="_blank">GitHub</a> | <a href="http://www.bubblecode.net/en/2012/02/07/magento-save-product-stock-moves/" target="_blank">WebSite / Manual</a>)
+<p class="note"><span>Magento extension to save products stock movements.</span></p>
+<button id="github_button" title="Install extension" type="button" class="scalable " onclick="javascript:install('http://github.com/jreinke/magento-stock-movements'); return false;" style=""><span><span><span>Install Save stock movements</span></span></span></button></p> 
+
+
+
+</fieldset>
+
+</div>
+
+
+<div class="section-config"><div class="entry-edit-head collapseable">
+
+<a id="github_cust-head" href="#" onclick="Fieldset.toggleCollapse('github_cust', '#'); return false;" class="">Customers experience</a>
+</div>
+
+<input id="github_cust-state" name="config_state[github_cust]" type="hidden" value="0">
+<fieldset class="config collapseable" id="github_cust" style="display: none;">
+
+<p><h3>Inchoo Social Connect</h3> (<a href="http://github.com/Marko-M/Inchoo_SocialConnect" target="_blank">GitHub</a> | <a href="http://inchoo.net/ecommerce/magento/social-connect-magento-extension/" target="_blank">WebSite / Manual</a>)
+<p class="note"><span>Inchoo_SocialConnect is a Magento extension allowing your customers to login or create an account at your store using their Google, Facebook or Twitter account. More easy way for create you customers accounts - more sales & better conversion!</span></p>
+<button id="github_button" title="Install extension" type="button" class="scalable " onclick="javascript:install('http://github.com/Marko-M/Inchoo_SocialConnect'); return false;" style=""><span><span><span>Install Inchoo Social Connect</span></span></span></button></p>
+
+<p><h3>Customer Activation</h3> (<a href="http://github.com/Vinai/customer-activation" target="_blank">GitHub</a> | <a href="http://www.magentocommerce.com/magento-connect/customer-activation.html" target="_blank">WebSite / Manual</a>)
+<p class="note"><span>This small extension makes it impossible for a customer to log in to magento, until the account has been activated in the adminhtml interface: Customers > Manage Customers > (select customer) > Account Information > Is activated</span></p>
+<button id="github_button" title="Install extension" type="button" class="scalable " onclick="javascript:install('http://github.com/Vinai/customer-activation'); return false;" style=""><span><span><span>Install Customer Activation</span></span></span></button></p>
+
+<p><h3>Customer Groups Catalog</h3> (<a href="http://github.com/Vinai/groupscatalog2" target="_blank">GitHub</a> | <a href="http://www.magentocommerce.com/magento-connect/customer-groups-catalog2.html" target="_blank">WebSite / Manual</a>)
+<p class="note"><span>Magento extension to enable you to hide categories and products from customers depending on their customer group.</span></p>
+<button id="github_button" title="Install extension" type="button" class="scalable " onclick="javascript:install('http://github.com/Vinai/groupscatalog2'); return false;" style=""><span><span><span>Install Customer Groups Catalog</span></span></span></button></p> 
+
+</fieldset>
+
+</div>
+
+
+<div class="section-config"><div class="entry-edit-head collapseable">
+
+<a id="github_design-head" href="#" onclick="Fieldset.toggleCollapse('github_design', '#'); return false;" class="">UI, templates, frontend</a>
+</div>
+
+<input id="github_design-state" name="config_state[github_design]" type="hidden" value="0">
+<fieldset class="config collapseable" id="github_design" style="display: none;">
+
+<p><h3>Magento HTML5 Responsive Theme Boilerplate </h3> (<a href="http://github.com/zeljkoprsa/waterlee-boilerplate" target="_blank">GitHub | <a href="http://jakesharp.uservoice.com/knowledgebase/articles/245052-intro-to-waterlee" target="_blank">WebSite / Manual</a>)
+<p class="note"><span>Adapting the site to the plethora of devices is a battle inside itself. Win it constantly by using built-in classes and media queries and build upon that with your own customized code. Checkout the demo: It's pretty ugly but you know better than to expect a boilerplate to be good looking, right? http://waterlee.jakesharp.co</span></p>
+<button id="github_button" title="Install extension" type="button" class="scalable " onclick="javascript:install('http://github.com/zeljkoprsa/waterlee-boilerplate'); return false;" style=""><span><span><span>Install Boilerplate</span></span></span></button></p>
+
+<p><h3>Magento Foundation 3 Framework / Responsive Theme</h3> (<a href="http://github.com/nandroid/MagentoFoundation" target="_blank">GitHub | <a href="http://www.magentocommerce.com/magento-connect/catalog/product/view/id/16399/" target="_blank">WebSite / Manual</a>)
+<p class="note"><span>Foundation 3 Framework for Magento 1.7. Foundation styles and libraries. Magento Responsive theme. Off-canvas Left-Right sidebar columns for mobile. 
+http://magendation.internetized.net/</span></p>
+<button id="github_button" title="Install extension" type="button" class="scalable " onclick="javascript:install('http://github.com/nandroid/MagentoFoundation'); return false;" style=""><span><span><span>Install Foundation</span></span></span></button></p>
+
+<p><h3>GPMD Magento Responsive Theme</h3> (<a href="http://github.com/gpmd/magento-responsive-theme" target="_blank">GitHub | <a href="http://github.com/gpmd/magento-responsive-theme" target="_blank">WebSite / Manual</a>)
+<p class="note"><span>The GPMD responsive Magento theme is a simple fluid base theme which can be easily used as a starting point for your projects. The styling has been kept purposely simple so it's easy to override. It's based on the base/default theme (with the demo store content), and has only a few template overrides to make the markup suitable for a responsive site. It combines elements from Mobile Boilerplate, Gridless and semantic.gs. It also includes the excellent Font Awesome icon font</span></p>
+<button id="github_button" title="Install extension" type="button" class="scalable " onclick="javascript:install('http://github.com/gpmd/magento-responsive-theme'); return false;" style=""><span><span><span>Install GPMD</span></span></span></button></p>
+
+<p><h3>0 Step Checkout </h3> (<a href="http://github.com/stalniy/0step-checkout" target="_blank">GitHub | <a href="http://www.magentocommerce.com/magento-connect/0-step-checkout.html" target="_blank">WebSite / Manual</a>)
+<p class="note"><span>0 Step Checkout provide One Page Checkout functionality for Magento, combine all the steps for checkout (including shopping cart) into one page only. It will made the checkout process much simpler, the customers will enjoy buying products and your online sales will greatly increase. Why is it better?</span></p>
+<button id="github_button" title="Install extension" type="button" class="scalable " onclick="javascript:install('http://github.com/stalniy/0step-checkout'); return false;" style=""><span><span><span>Install 0 Step Checkout</span></span></span></button></p>
+
+<p><h3>Magento Quick View Ajax Loader</h3> (<a href="http://github.com/czettnersandor/magento-quick-view-ajax" target="_blank">GitHub / Manual</a>)
+<p class="note"><span>"Quick View Ajax Loader" is an extension for the product list page in your Magento online store. Let your customers see the details of the products in your store without leaving the category page.</span></p>
+<button id="github_button" title="Install extension" type="button" class="scalable " onclick="javascript:install('http://github.com/stalniy/0step-checkout'); return false;" style=""><span><span><span>Install Quick View Ajax Loader</span></span></span></button></p>
+
+
+
+</fieldset>
+
+</div>
+
+
+
+<div class="section-config"><div class="entry-edit-head collapseable">
+
+<a id="github_dev-head" href="#" onclick="Fieldset.toggleCollapse('github_dev', '#'); return false;" class="">Development, system, admin panel</a>
+</div>
+
+<input id="github_dev-state" name="config_state[github_dev]" type="hidden" value="0">
+<fieldset class="config collapseable" id="github_dev" style="display: none;">
+
+<p><h3>Mage Monitoring</h3> (<a href="http://github.com/magento-hackathon/Hackathon_MageMonitoring" target="_blank">GitHub</a>)
+<p class="note"><span>Magento Extension to get health of your Magento installation (Server, PHP, APC, Logs, Rewrites, Modules version installed ...)</span></p>
+<button id="github_button" title="Install extension" type="button" class="scalable " onclick="javascript:install('http://github.com/magento-hackathon/Hackathon_MageMonitoring'); return false;" style=""><span><span><span>Install Mage Monitoring</span></span></span></button></p>
+
+
+<p><h3>Aoe Scheduler</h3> (<a href="http://github.com/fbrnc/Aoe_Scheduler" target="_blank">GitHub</a> | <a href="http://www.fabrizio-branca.de/magento-cron-scheduler.html" target="_blank">WebSite / Manual</a>)
+<p class="note"><span>There are some problems with cron tasks in Magento: It's hard to see which tasks had been executed and which tasks will be executed next. Currently the only way is to have a look at the cron_schedule database table. Developing cron tasks is not easy because it means waiting for the next scheduler run to execute your task. Debugging also is not easy as the scheduler runs those tasks in the background and won't give you any valuable feedback. Keeping an eye on the php error logs and writing own logs to see what is happening within your task is quite annoying. This extension is the solution to these problems.</span></p>
+<button id="github_button" title="Install extension" type="button" class="scalable " onclick="javascript:install('http://github.com/Marko-M/Inchoo_SocialConnect'); return false;" style=""><span><span><span>Install Aoe Scheduler</span></span></span></button></p>
+
+<p><h3>Pulsestorm Launcher</h3> (<a href="http://github.com/astorm/PulsestormLauncher" target="_blank">GitHub</a> | <a href="http://alanstorm.com/magento_admin_navigation_launcher" target="_blank">WebSite / Manual</a>)
+<p class="note"><span>The Pulse storm launcher provides the Magento admin console with a Quicksilver like plugin for immediate access to Magento navigation items, system configuration sections, and the Magento global search. Works like Mac OS Spotlight in you Magento backend.</span></p>
+<button id="github_button" title="Install extension" type="button" class="scalable " onclick="javascript:install('http://github.com/Marko-M/Inchoo_SocialConnect'); return false;" style=""><span><span><span>Install Pulsestorm Launcher</span></span></span></button></p>
+
+<p><h3>Enhanced Admin Grids (+ Editor)</h3> (<a href="http://github.com/mage-eag/mage-enhanced-admin-grids" target="_blank">GitHub</a> | <a href="https://www.magentocommerce.com/magento-connect/enhanced-admin-grids-editor.html" target="_blank">WebSite / Manual</a>)
+<p class="note"><span>Allow to customize a vast majority of the administration grids and add to it some useful features + an editor</span></p>
+<button id="github_button" title="Install extension" type="button" class="scalable " onclick="javascript:install('http://github.com/mage-eag/mage-enhanced-admin-grids'); return false;" style=""><span><span><span>Install Enhanced Admin Grids</span></span></span></button></p> 
+
+<p><h3>Jreinke Magento admin theme</h3> (<a href="http://github.com/jreinke/magento-admin-theme" target="_blank">GitHub</a> | <a href="http://www.bubblecode.net/en/2012/05/02/give-your-magento-admin-panel-a-facelift/" target="_blank">WebSite / Manual</a>)
+<p class="note"><span>Clean Magento admin template with fresh look at you Magento backend.</span></p>
+<button id="github_button" title="Install extension" type="button" class="scalable " onclick="javascript:install('http://github.com/jreinke/magento-admin-theme'); return false;" style=""><span><span><span>Install Jreinke Magento admin theme</span></span></span></button></p>
+
+<p><h3>Magento-Markdown</h3> (<a href="http://github.com/SchumacherFM/Magento-Markdown" target="_blank">GitHub / Manual</a> | <a href="http://michelf.ca/projects/php-markdown/" target="_blank">WebSite</a>)
+<p class="note"><span>Markdown as module for Magento! Replaces the TinyMCE editor. Markdown is a text-to-HTML conversion tool for web writers. Markdown allows you to write using an easy-to-read, easy-to-write plain text format, then convert it to structurally valid XHTML (or HTML).</span></p>
+<button id="github_button" title="Install extension" type="button" class="scalable " onclick="javascript:install('http://github.com/SchumacherFM/Magento-Markdown'); return false;" style=""><span><span><span>Install Markdown</span></span></span></button></p>
+
+<p><h3>Inchoo Clean Apc cache</h3> (<a href="http://github.com/buric/Inchoo_Apc" target="_blank">GitHub</a> | <a href="http://inchoo.net/ecommerce/magento/manage-apc-from-magento-admin/" target="_blank">WebSite / Manual</a>)
+<p class="note"><span>Clear the APC cache from Cache management section in Magento admin panel.</span></p>
+<button id="github_button" title="Install extension" type="button" class="scalable " onclick="javascript:install('http://github.com/buric/Inchoo_Apc'); return false;" style=""><span><span><span>Install Clean Apc cache</span></span></span></button></p>
+ 
+
+</fieldset>
+
+</div>
+
+
+
+
+
+
+

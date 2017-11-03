@@ -1,0 +1,24 @@
+<?php 
+
+	if (!Mage::getConfig()->getModuleConfig('Hackathon_MageTrashApp')->is('active', 'true')):
+	
+?>
+
+	<p class="note"><span>For deactivate extensions you can easy modify module xml file in app/etc/modules according to <a href="http://inchoo.net/ecommerce/magento/how-to-fully-disable-turn-off-magento-module/" target="_blank">this</a> manual. Also you can install and use <a href="https://github.com/magento-hackathon/MageTrashApp">MageTrashApp</a> extension</a> for fast completely disable extensions directly from Magento admin.</span></p>
+	<button id="github_button" title="Install extension" type="button" class="scalable " onclick="javascript:install('https://github.com/magento-hackathon/MageTrashApp'); return false;" style=""><span><span><span>Install MageTrashApp</span></span></span></button></p>
+
+<?php 
+
+	else :
+?>	
+	<br />
+	<p class="note"><span><a href="https://github.com/magento-hackathon/MageTrashApp">MageTrashApp</a> installed!</a></span></p>
+	<button id="github_button" title="Install extension" type="button" class="scalable " onclick="javascript:window.location = '<?php echo Mage::helper('adminhtml')->getUrl('/system_config/edit/section/magetrashapp') ?>';" style=""><span><span><span>Go to extensions control</span></span></span></button></p>
+
+	
+	
+
+<?php endif; ?>
+		<p class="note"><span>Please note : MageTrashApp support full uninstall only for extensions with correct uinstall file for MageTrashApp, but you can enable/disable all modules installed in you store.</span></p>
+		
+

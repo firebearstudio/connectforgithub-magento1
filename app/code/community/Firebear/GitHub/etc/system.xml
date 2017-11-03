@@ -1,0 +1,104 @@
+<?xml version="1.0"?>
+<config>
+
+    <tabs>
+        <Firebear translate="label">
+            <label>Firebear</label>
+            <sort_order>220</sort_order>
+        </Firebear>
+    </tabs>
+
+    <sections>
+        <github translate="label" module="github">
+            <label>Connect for GitHub</label>
+            <tab>Firebear</tab>
+            <show_in_default>1</show_in_default>
+            <show_in_website>1</show_in_website>
+            <show_in_store>1</show_in_store>
+            <sort_order>1000</sort_order>
+            <groups>
+                
+                <url translate="label">
+                    <label>Install extension from GitHub repository URL</label>
+                    <frontend_type>text</frontend_type>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>0</show_in_store>
+                    <sort_order>1</sort_order>
+                    <fields>
+                        
+                        <git_url translate="label">
+                            <label>URL</label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>20</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>0</show_in_store>
+                            <comment><![CDATA[ <a href="https://github.com/" target="_blank">GitHub</a> repository URL. You can find any Magento extension on GitHub and just copy/paste here is repository URL for one click install! Repository URL must looks like "https://github.com/Authorname/Modulename" without any additional parameters in URL! <br /> If you get error in extension install process, please check you folders permissions, it should be 755 for folders, <a href="https://www.magentocommerce.com/wiki/groups/227/resetting_file_permissions" target="_blank">more details</a>]]></comment>
+                        </git_url>
+
+                        
+			            <check translate="label">
+			                <label></label>
+			                <frontend_type>button</frontend_type>
+			                <frontend_model>github/adminhtml_system_config_form_button</frontend_model>
+			                <sort_order>40</sort_order>
+			                <show_in_default>1</show_in_default>
+			                <show_in_website>1</show_in_website>
+			                <show_in_store></show_in_store>
+			                <comment><![CDATA[]]></comment>
+			            </check>
+
+                    </fields>
+                </url>
+                
+                <speed translate="label">
+                    <label>Recommended, must have and best Magento extensions on GitHub</label>
+                    <frontend_type>text</frontend_type>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>0</show_in_store>
+                    <sort_order>2</sort_order>
+                    <fields>
+                        
+			            <install translate="label">
+			                <label></label>
+			                <frontend_type>button</frontend_type>
+			                <frontend_model>github/adminhtml_system_config_form_install</frontend_model>
+			                <sort_order>40</sort_order>
+			                <show_in_default>1</show_in_default>
+			                <show_in_website>1</show_in_website>
+			                <show_in_store></show_in_store>
+			      
+			            </install>
+
+                    </fields>
+                </speed>
+                
+                <uinstall translate="label">
+                    <label>Extensions deactivation</label>
+                    <frontend_type>text</frontend_type>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>0</show_in_store>
+                    <sort_order>3</sort_order>
+                    <fields> 
+                        
+						<uninstall translate="label">
+			                <label></label>
+			                <frontend_type>button</frontend_type>
+			                <frontend_model>github/adminhtml_system_config_form_uninstall</frontend_model>
+			                <sort_order>40</sort_order>
+			                <show_in_default>1</show_in_default>
+			                <show_in_website>1</show_in_website>
+			                <show_in_store></show_in_store>
+			      
+			            </uninstall>
+
+                    </fields>
+                </uinstall>
+                
+            </groups>
+        </github>
+    </sections>
+</config>

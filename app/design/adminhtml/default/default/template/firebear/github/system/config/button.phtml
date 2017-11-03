@@ -1,0 +1,23 @@
+<script type="text/javascript">
+    //<![CDATA[
+    function check() {
+        new Ajax.Request('<?php echo Mage::helper('adminhtml')->getUrl('adminhtml/adminhtml_github/install') ?>', {
+            method:     'post',
+            parameters: {git_url: $$('#github_url_git_url')[0].value}, 
+            onSuccess: function(transport){
+				
+				console.log(transport.responseText);
+			
+	            if (transport.responseText == 1){
+	                window.location.reload();
+	            }else{
+		            alert("Error");
+					console.log(transport.responseText);
+	            }
+            }
+        });
+    }
+    //]]>
+</script>
+
+<?php echo $this->getButtonHtml() ?>

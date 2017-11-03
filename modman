@@ -1,0 +1,3 @@
+app/code/community/Firebear/GitHub/ app/code/community/Firebear/GitHub/
+app/design/adminhtml/default/default/template/firebear/github app/design/adminhtml/default/default/template/firebear/github
+app/etc/modules/Firebear_GitHub.xml app/etc/modules/Firebear_GitHub.xml

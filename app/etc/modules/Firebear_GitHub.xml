@@ -1,0 +1,8 @@
+<config>
+   <modules>
+      <Firebear_GitHub>
+         <active>true</active>
+         <codePool>community</codePool>
+      </Firebear_GitHub>
+   </modules>
+</config>
